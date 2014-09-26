@@ -1,0 +1,405 @@
+<template name= "visualizarestadistica">
+{{reportdata}}
+	<div class="container">
+		<div class="row"> 
+			<div class="col-sm-6">
+				<div class="panel panel-success">
+					<div class="panel-heading"><strong>Sede Centro</strong></div>
+					
+
+					<table class="table table-striped table-condensed table-bordered" id= "prueba">
+						<thead>
+							<tr>
+								<th rowspan="2">Nombre</th>
+								<th colspan="2">Donación</th>
+								<th colspan="3">Total</th>
+								<th rowspan="2">Inventario</th>
+								<th rowspan="2">Apro</th>
+							</tr>
+							<tr>
+								<!-- <th></th> -->
+								<th>Enfermeria</th>
+								<th>Entidad</th>
+								<th>Don</th>
+								<th>Cob</th>
+								<th>Todos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>DOTAREM</td>
+								<td>{{contrast.CENTRO_DOTA_condona_enf}}</td>
+								<td>{{contrast.CENTRO_DOTA_condona_ent}}</td>
+								<td>{{contrast.CENTRO_DOTA_condona_tot}}</td>
+								<td>{{contrast.CENTRO_DOTA_sindona}}</td>
+								<td>{{contrast.CENTRO_DOTA}}</td>
+								<td>?</td>
+								<td>{{contrast.CENTRO_DOTA_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>GADOVIST</td>
+								<td>{{contrast.CENTRO_GADO_condona_enf}}</td>
+								<td>{{contrast.CENTRO_GADO_condona_ent}}</td>
+								<td>{{contrast.CENTRO_GADO_condona_tot}}</td>
+								<td>{{contrast.CENTRO_GADO_sindona}}</td>
+								<td>{{contrast.CENTRO_GADO}}</td>
+								<td>?</td>
+								<td>{{contrast.CENTRO_GADO_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>PRIMOVIST</td>
+								<td>{{contrast.CENTRO_PRIMO_condona_enf}}</td>
+								<td>{{contrast.CENTRO_PRIMO_condona_ent}}</td>
+								<td>{{contrast.CENTRO_PRIMO_condona_tot}}</td>
+								<td>{{contrast.CENTRO_PRIMO_sindona}}</td>
+								<td>{{contrast.CENTRO_PRIMO}}</td>
+								<td>?</td>
+								<td>{{contrast.CENTRO_PRIMO_aprove}}</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+				</div>
+
+
+			<div class="col-sm-6">
+				<div class="panel panel-info">
+					<div class="panel-heading"><strong>Sede Poblado</strong></div>
+
+					<table class="table table-striped table-condensed table-bordered">
+						<thead>
+							<tr>
+								<th rowspan="2">Nombre</th>
+								<th colspan="2">Donación</th>
+								<th colspan="3">Total</th>
+								<th rowspan="2">Inventario</th>
+								<th rowspan="2">Apro</th>
+							</tr>
+							<tr>
+								<!-- <th></th> -->
+								<th>Enfermeria</th>
+								<th>Entidad</th>
+								<th>Don</th>
+								<th>Cob</th>
+								<th>Todos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>DOTAREM</td>
+								<td>{{contrast.POB_DOTA_condona_enf}}</td>
+								<td>{{contrast.POB_DOTA_condona_ent}}</td>
+								<td>{{contrast.POB_DOTA_condona_tot}}</td>
+								<td>{{contrast.POB_DOTA_sindona}}</td>
+								<td>{{contrast.POB_DOTA}}</td>
+								<td>?</td>
+								<td>{{contrast.POB_DOTA_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>GADOVIST</td>
+								<td>{{contrast.POB_GADO_condona_enf}}</td>
+								<td>{{contrast.POB_GADO_condona_ent}}</td>
+								<td>{{contrast.POB_GADO_condona_tot}}</td>
+								<td>{{contrast.POB_GADO_sindona}}</td>
+								<td>{{contrast.POB_GADO}}</td>
+								<td>?</td>
+								<td>{{contrast.POB_GADO_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>PRIMOVIST</td>
+								<td>{{contrast.POB_PRIMO_condona_enf}}</td>
+								<td>{{contrast.POB_PRIMO_condona_ent}}</td>
+								<td>{{contrast.POB_PRIMO_condona_tot}}</td>
+								<td>{{contrast.POB_PRIMO_sindona}}</td>
+								<td>{{contrast.POB_PRIMO}}</td>
+								<td>?</td>
+								<td>{{contrast.POB_PRIMO_aprove}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="panel panel-warning">
+					<div class="panel-heading"><strong>Sede CDR</strong></div>
+					<table class="table table-striped table-condensed table-bordered">
+						<thead>
+							<tr>
+								<th rowspan="2">Nombre</th>
+								<th colspan="2">Donación</th>
+								<th colspan="3">Total</th>
+								<th rowspan="2">Inventario</th>
+								<th rowspan="2">Apro</th>
+							</tr>
+							<tr>
+								<!-- <th></th> -->
+								<th>Enfermeria</th>
+								<th>Entidad</th>
+								<th>Don</th>
+								<th>Cob</th>
+								<th>Todos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>DOTAREM</td>
+								<td>{{contrast.CDR_DOTA_condona_enf}}</td>
+								<td>{{contrast.CDR_DOTA_condona_ent}}</td>
+								<td>{{contrast.CDR_DOTA_condona_tot}}</td>
+								<td>{{contrast.CDR_DOTA_sindona}}</td>
+								<td>{{contrast.CDR_DOTA}}</td>
+								<td>?</td>
+								<td>{{contrast.CDR_DOTA_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>GADOVIST</td>
+								<td>{{contrast.CDR_GADO_condona_enf}}</td>
+								<td>{{contrast.CDR_GADO_condona_ent}}</td>
+								<td>{{contrast.CDR_GADO_condona_tot}}</td>
+								<td>{{contrast.CDR_GADO_sindona}}</td>
+								<td>{{contrast.CDR_GADO}}</td>
+								<td>?</td>
+								<td>{{contrast.CDR_GADO_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>PRIMOVIST</td>
+								<td>{{contrast.CDR_PRIMO_condona_enf}}</td>
+								<td>{{contrast.CDR_PRIMO_condona_ent}}</td>
+								<td>{{contrast.CDR_PRIMO_condona_tot}}</td>
+								<td>{{contrast.CDR_PRIMO_sindona}}</td>
+								<td>{{contrast.CDR_PRIMO}}</td>
+								<td>?</td>
+								<td>{{contrast.CDR_PRIMO_aprove}}</td>
+							</tr>
+							<tr>
+								<td>XENETIX 300</td>
+								<td>{{contrast.CDR_XENETIX_condona_enf}}</td>
+								<td>{{contrast.CDR_XENETIX_condona_ent}}</td>
+								<td>{{contrast.CDR_XENETIX_condona_tot}}</td>
+								<td>{{contrast.CDR_XENETIX_sindona}}</td>
+								<td>{{contrast.CDR_XENETIX}}</td>
+								<td>?</td>
+								<td>{{contrast.CDR_XENETIX_aprove}}</td>
+							</tr>
+							<tr>
+								<td>GASTROVIEW</td>
+								<td>{{contrast.CDR_GASTRO_condona_enf}}</td>
+								<td>{{contrast.CDR_GASTRO_condona_ent}}</td>
+								<td>{{contrast.CDR_GASTRO_condona_tot}}</td>
+								<td>{{contrast.CDR_GASTRO_sindona}}</td>
+								<td>{{contrast.CDR_GASTRO}}</td>
+								<td>?</td>
+								<td>{{contrast.CDR_GASTRO_aprove}}</td>
+							</tr>
+							<tr>
+								<td>HEXABRIX 320</td>
+								<td>{{contrast.CDR_HEXA_condona_enf}}</td>
+								<td>{{contrast.CDR_HEXA_condona_ent}}</td>
+								<td>{{contrast.CDR_HEXA_condona_tot}}</td>
+								<td>{{contrast.CDR_HEXA_sindona}}</td>
+								<td>{{contrast.CDR_HEXA}}</td>
+								<td>?</td>
+								<td>{{contrast.CDR_HEXA_aprove}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+			<div class="col-sm-6">
+				<div class="panel panel-danger">
+					<div class="panel-heading"><strong>Sede La 80</strong></div>
+					<table class="table table-striped table-condensed table-bordered">
+						<thead>
+							<tr>
+								<th rowspan="2">Nombre</th>
+								<th colspan="2">Donación</th>
+								<th colspan="3">Total</th>
+								<th rowspan="2">Inventario</th>
+								<th rowspan="2">Apro</th>
+							</tr>
+							<tr>
+								<!-- <th></th> -->
+								<th>Enfermeria</th>
+								<th>Entidad</th>
+								<th>Don</th>
+								<th>Cob</th>
+								<th>Todos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>DOTAREM</td>
+								<td>{{contrast.LA80_DOTA_condona_enf}}</td>
+								<td>{{contrast.LA80_DOTA_condona_ent}}</td>
+								<td>{{contrast.LA80_DOTA_condona_tot}}</td>
+								<td>{{contrast.LA80_DOTA_sindona}}</td>
+								<td>{{contrast.LA80_DOTA}}</td>
+								<td>?</td>
+								<td>{{contrast.LA80_DOTA_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>GADOVIST</td>
+								<td>{{contrast.LA80_GADO_condona_enf}}</td>
+								<td>{{contrast.LA80_GADO_condona_ent}}</td>
+								<td>{{contrast.LA80_GADO_condona_tot}}</td>
+								<td>{{contrast.LA80_GADO_sindona}}</td>
+								<td>{{contrast.LA80_GADO}}</td>
+								<td>?</td>
+								<td>{{contrast.LA80_GADO_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>PRIMOVIST</td>
+								<td>{{contrast.LA80_PRIMO_condona_enf}}</td>
+								<td>{{contrast.LA80_PRIMO_condona_ent}}</td>
+								<td>{{contrast.LA80_PRIMO_condona_tot}}</td>
+								<td>{{contrast.LA80_PRIMO_sindona}}</td>
+								<td>{{contrast.LA80_PRIMO}}</td>
+								<td>?</td>
+								<td>{{contrast.LA80_PRIMO_aprove}}</td>
+							</tr>
+
+							<tr>
+								<td>MAGNEVIST</td>
+								<td>{{contrast.LA80_MAGNE_condona_enf}}</td>
+								<td>{{contrast.LA80_MAGNE_condona_ent}}</td>
+								<td>{{contrast.LA80_MAGNE_condona_tot}}</td>
+								<td>{{contrast.LA80_MAGNE_sindona}}</td>
+								<td>{{contrast.LA80_MAGNE}}</td>
+								<td>?</td>
+								<td>{{contrast.LA80_MAGNE_aprove}}</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-heading"><strong>Todas las sedes</strong></div>
+				<table class="table table-striped table-condensed table-bordered">
+					<thead>
+						<tr>
+							<th rowspan="2">Nombre</th>
+							<th colspan="2">Donación</th>
+							<th colspan="3">Total</th>
+							<th rowspan="2">Inventario</th>
+							<th rowspan="2">Apro</th>
+						</tr>
+						<tr>
+							<!-- <th></th> -->
+							<th>Enfermeria</th>
+							<th>Entidad</th>
+							<th>Don</th>
+							<th>Cob</th>
+							<th>Todos</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>DOTAREM</td>
+							<td>{{contrast.TODAS_DOTA_condona_enf}}</td>
+							<td>{{contrast.TODAS_DOTA_condona_ent}}</td>
+							<td>{{contrast.TODAS_DOTA_condona_tot}}</td>
+							<td>{{contrast.TODAS_DOTA_sindona}}</td>
+							<td>{{contrast.TODAS_DOTA}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_DOTA_aprove}}</td>
+						</tr>
+
+						<tr>
+							<td>GADOVIST</td>
+							<td>{{contrast.TODAS_GADO_condona_enf}}</td>
+							<td>{{contrast.TODAS_GADO_condona_ent}}</td>
+							<td>{{contrast.TODAS_GADO_condona_tot}}</td>
+							<td>{{contrast.TODAS_GADO_sindona}}</td>
+							<td>{{contrast.TODAS_GADO}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_GADO_aprove}}</td>
+						</tr>
+
+						<tr>
+							<td>PRIMOVIST</td>
+							<td>{{contrast.TODAS_PRIMO_condona_enf}}</td>
+							<td>{{contrast.TODAS_PRIMO_condona_ent}}</td>
+							<td>{{contrast.TODAS_PRIMO_condona_tot}}</td>
+							<td>{{contrast.TODAS_PRIMO_sindona}}</td>
+							<td>{{contrast.TODAS_PRIMO}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_PRIMO_aprove}}</td>
+						</tr>
+						<tr>
+							<td>XENETIX 300</td>
+							<td>{{contrast.TODAS_XENETIX_condona_enf}}</td>
+							<td>{{contrast.TODAS_XENETIX_condona_ent}}</td>
+							<td>{{contrast.TODAS_XENETIX_condona_tot}}</td>
+							<td>{{contrast.TODAS_XENETIX_sindona}}</td>
+							<td>{{contrast.TODAS_XENETIX}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_XENETIX_aprove}}</td>
+						</tr>
+						<tr>
+							<td>GASTROVIEW</td>
+							<td>{{contrast.TODAS_GASTRO_condona_enf}}</td>
+							<td>{{contrast.TODAS_GASTRO_condona_ent}}</td>
+							<td>{{contrast.TODAS_GASTRO_condona_tot}}</td>
+							<td>{{contrast.TODAS_GASTRO_sindona}}</td>
+							<td>{{contrast.TODAS_GASTRO}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_GASTRO_aprove}}</td>
+						</tr>
+						<tr>
+							<td>HEXABRIX 320</td>
+							<td>{{contrast.TODAS_HEXA_condona_enf}}</td>
+							<td>{{contrast.TODAS_HEXA_condona_ent}}</td>
+							<td>{{contrast.TODAS_HEXA_condona_tot}}</td>
+							<td>{{contrast.TODAS_HEXA_sindona}}</td>
+							<td>{{contrast.TODAS_HEXA}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_HEXA_aprove}}</td>
+						</tr>
+
+						<tr>
+							<td>MAGNEVIST</td>
+							<td>{{contrast.TODAS_MAGNE_condona_enf}}</td>
+							<td>{{contrast.TODAS_MAGNE_condona_ent}}</td>
+							<td>{{contrast.TODAS_MAGNE_condona_tot}}</td>
+							<td>{{contrast.TODAS_MAGNE_sindona}}</td>
+							<td>{{contrast.TODAS_MAGNE}}</td>
+							<td>?</td>
+							<td>{{contrast.TODAS_MAGNE_aprove}}</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	
+		<a id="dlink"  style="display:none;"></a>
+
+		<button id="export">EXPORT</button>
+
+
+
+
+
+</div>
+
+</template>

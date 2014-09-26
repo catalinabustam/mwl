@@ -1,0 +1,22 @@
+<template name="orderItem">
+  <div class="order" data-id="{{accession}}" patient-name="{{patient.firstname}} {{patient.lastname}}" modality="{{modality.type}}" procedure-code="{{procedure_code}}" institution-code="{{referring.institution.code}}">
+    <div class="order-content">
+	
+      <h3><a href="{{pathFor 'orderPage'}}">{{patient.firstname}} {{patient.lastname}}</a><col-md->{{procedure_desc}}  ({{accession}})</col-md-></h3>
+     <h5>{{prettifyDate datetime}} - <small>{{indication}}</small></h5>
+     <h6><small>{{remarks}}</small></h6>
+	 <a href="{{pathFor 'orderPage'}}">{{pluralize contrastCounter "registro"}} de contraste</a>
+	
+    </div>
+	
+    <div class="pull-right">
+        <button type="button" class="btn btn-primary disabled">Entrevista</button>
+		
+        <button id="addContrast" type="button" class="{{buttonclass}}" data-toggle="modal" href="#myModal">Contraste</button>
+    </div>
+  </div>
+    <!-- Modal -->
+	
+	          {{>contrast}}
+		
+</template>

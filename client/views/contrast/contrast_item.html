@@ -1,0 +1,45 @@
+<template name="contrastItem">
+
+<div class="contrast" data-id="{{_id}}" donacionentidad={{donacionentidad}}>
+	
+    <li>
+		 <div class="contrast-content">
+      <h4>
+        <col-md- class="author">Autor: {{author}}</col-md->
+        <col-md- class="date">fecha {{submittedText}}</col-md->
+      </h4>
+      <p><dl class="dl-horizontal">
+    	<dt>Nombre</dt>
+    	<dd>{{nombre}}</dd>
+		<!--<dt>ampolla</dt>
+  	  	<dd>{{ampolla}}</dd>-->
+		<dt>Tipo de ampolla</dt>
+		<dd>{{tipoampolla}}</dd>
+  		<dt>dosis</dt>
+  	  	<dd>{{dosis}}</dd>
+  		<dt>donación</dt>
+  	  	<dd>{{donacion}}</dd>
+  		<dt>Número Secuencial</dt>
+  	  	<dd>{{counterNumber}}</dd>
+		</dl></p>
+		
+		{{#if donacionentidad}}
+		<blockquote class="pull-right">
+			<p class="text-warning"><strong>Contraste donado por entidad</strong></p>
+		 
+		</blockquote>
+		{{/if}}
+	  
+	    {{#if ownContrast}}
+	        <button type="button" class="btn btn-danger delete">Eliminar</button>
+			
+			 
+	        <button id="editContrast" type="button" class="btn btn-warning" data-toggle="modal" href="#modalEdit">Editar</button>{{/if}}
+	    
+      </div>
+    </li>
+ {{>contrastEdit}}
+</div>
+
+
+</template>

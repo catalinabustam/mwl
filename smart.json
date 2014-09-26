@@ -1,0 +1,13 @@
+{
+  "packages": {
+    "spin": {},
+    "paginated-subscription": {},
+    "sugar": {},
+    "iron-router": {},
+    "iron-router-progress": {},
+    "bootstrap-3": {},
+    "accounts-ui-bootstrap-3": {},
+    "bootstrap-daterangepicker": {},
+    "moment": {}
+  }
+}

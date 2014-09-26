@@ -1,0 +1,105 @@
+<template name="contrast">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+			
+	      <div class="modal-header">
+			 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			 <h4 class="modal-title" id="myModalLabel">Registrar contraste para el paciente</h4> <h5>{{study.patientName}}</h5>
+			 <h6>{{study.accnum}}</h6>
+	      </div>
+		  
+	      <div class="modal-body">
+        	  <div class="form-group">
+				  <label for="nombre">Nombre</label>
+				  	<div class="row">
+			  		  <div class="col-xs-4">
+						  <select  class="form-control" id="nombre" name="nombre">
+		 					  {{#if modality}}
+							  <option>DOTAREM</option>
+		 					  <option>GADOVIST</option>
+							  <option>PRIMOVIST</option>
+							  <option>MAGNEVIST</option>
+		 					  {{else}}
+							  <option>XENETIX  300</option>
+			 				 <option>GASTROVIEW</option>
+			 				<option>HEXABRIX 320</option>
+		 				   {{/if}}
+					     </select>
+					 </div>
+				  </div>
+			  </div>
+       	 	
+		
+            <div class="form-group">
+				<label for="ampolla">Ampolla </label><br>
+				<div class="row">
+				
+					<!--<div class="col-xs-3">
+          			  <input name="ampolla" type="text" class="form-control" id="ampolla" placeholder="#">
+				    </div>-->
+					
+					<div class="col-xs-2">
+					  
+					   <div class="radio">
+						   <label>
+							   <input type="radio" name="tipoampolla" id="ampollanueva" value="nueva">
+							   
+	  			       	 		Nueva
+						  </label>
+	  			 	   </div>
+				   </div>
+					  <div class="col-xs-2">
+	  			 	   	<div class="radio">
+	  			    		<label>
+	  			      	  	  <input type="radio" name="tipoampolla" id="ampollaabierta" value="abierta">
+	  			      		Abierta
+	  			    		</label>
+					  	</div>
+				  	 </div>
+				  </div>
+				  
+			
+			  
+	      </div>
+			
+		    <div class="form-group">
+				<label for="dosis">Dosis</label>
+  				<div class="row">
+  		 	   	 	<div class="col-xs-3">
+          			  	<input name="dosis" type="text" class="form-control" id="dosis" placeholder="Dosis (ml)">
+	  				</div>
+  		  		</div>
+        	</div>
+			
+			<div class="checkbox">
+            	  <input type="checkbox" name="donacion" id="donacion"  value="si">Donación
+		  	</div>
+			
+			
+	
+			
+			
+	 </div>
+		  	
+ 
+	
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+      <button id="submit" class="btn btn-primary">Registrar contraste</button>
+    </div>
+	
+	
+
+	
+	
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->  
+
+
+
+     
+    
+ </template>

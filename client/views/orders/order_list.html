@@ -1,0 +1,11 @@
+<template name="ordersList">
+  <div class="orders">
+    {{#each orders}}
+      {{> orderItem}}
+    {{/each}}
+    
+    
+      <a class="load-more" href="{{nextPath}}">Cargar más</a>
+ 
+  </div>
+</template>
