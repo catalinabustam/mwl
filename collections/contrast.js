@@ -22,7 +22,7 @@ Meteor.methods({
 		if (!contrastAttributes.orderAcc)
 		throw new Meteor.Error(422, 'Debe ingresar el contraste a una orden');
 
-		var contrast = _.extend(_.pick(contrastAttributes, 'orderAcc', 'nombre','ampolla','tipoampolla','dosis','donacion','counterId', 'countName','donacionentidad','sede','modalidad'), {   
+		var contrast = _.extend(_.pick(contrastAttributes, 'orderAcc', 'nombre','tipoampolla','dosis','donacion','donacionentidad','sede','modalidad'), {   
 			  userId: user._id,
 		      author: user.username,
 		      submitted: new Date()
@@ -33,15 +33,15 @@ Meteor.methods({
 		  update[countn]=1
 		  
 		
-		Counters.update(contrast.counterId, {$inc: update});
-	    conter=Counters.findOne(contrast.counterId)
-	    countv=conter[countn]
+		//Counters.update(contrast.counterId, {$inc: update});
+	    //conter=Counters.findOne(contrast.counterId)
+	    //countv=conter[countn]
 			// create the contrast, save the id
-		contrast.counterNumber=countv
+		//contrast.counterNumber=countv
 		contrast._id = Contrasts.insert(contrast);
 			
 	
-		   return countv
+		  // return countv
 	   }
    });
 	   

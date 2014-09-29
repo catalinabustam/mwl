@@ -66,19 +66,21 @@
 		    <div class="form-group">
 				<label for="dosis">Dosis</label>
   				<div class="row">
-  		 	   	 	<div class="col-xs-3">
-          			  	<input name="dosis" type="text" class="form-control" id="dosis" placeholder="Dosis (ml)">
+  		 	   	 	<div class="col-xs-2">
+          			  	<input name="dosis" type="number" min="0" class="form-control" id="dosis" placeholder="(ml)"> 
 	  				</div>
+	  				<h5><em>ml</em></h5>
   		  		</div>
         	</div>
 			
-			<div class="checkbox">
-            	  <input type="checkbox" name="donacion" id="donacion"  value="si">Donación
-		  	</div>
-			
-			
-	
-			
+					<div class="form-group">
+ 						<div class="row">
+							<div class="col-xs-5">
+ 								<label for="nombren">Donación</label>	
+             	   				<input type="checkbox" name="donacionn" id="donacionn"  value="si" {{donacionCheck}}> 
+             	   			</div>	
+             			</div>
+             		</div>	
 			
 	 </div>
 		  	

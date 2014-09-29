@@ -82,7 +82,7 @@ Template.contrast.events({
       dosis: $('#dosis').val(),
 	  donacion: donacion,
 	  orderAcc: currentOrderAcc,
-	  counterId: countern._id,
+	  //counterId: countern._id,
 	  countName:countName,
 	  donacionentidad:donacionentidad,
 	  sede:sede,
@@ -105,7 +105,7 @@ Template.contrast.events({
 		   
      console.log(count)
             $('#myModal').modal('hide')
-			 alert("Número secuencial asignado: " + count);
+			 //alert("Número secuencial asignado: " + count);
 	
          
       }

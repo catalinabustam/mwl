@@ -30,3 +30,6 @@ Meteor.publish('donationhearts', function() {
 Meteor.publish('institutions', function() {
   return Institutions.find();
 });
+Meteor.publish('inventario', function() {
+  return Inventario.find();
+});
