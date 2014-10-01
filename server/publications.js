@@ -6,6 +6,9 @@ Meteor.publish('counters', function() {
   return Counters.find();
 });
 
+Meteor.publish('inventarios', function() {
+  return Inventarios.find();
+});
 
 Meteor.publish('singleOrder', function(accession) {
   return accession && Orders.find({accession:accession});
@@ -30,6 +33,5 @@ Meteor.publish('donationhearts', function() {
 Meteor.publish('institutions', function() {
   return Institutions.find();
 });
-Meteor.publish('inventario', function() {
-  return Inventario.find();
-});
+
+

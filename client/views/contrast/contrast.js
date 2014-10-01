@@ -21,19 +21,14 @@ Template.contrast.events({
     event.preventDefault();
 	var pcode=Session.get('selectedProcedureCode')	
 	var icode=Session.get('selectedInstitutionCode')
-	console.log(pcode)
-	console.log(icode)
 	var flagangios=Donationangios.find({CODIGO:pcode}).count()!=0
-	console.log(flagangios)
 	var flaghearts=Donationhearts.find({CODIGO:pcode}).count()!=0
 	var flagangioins=Institutions.find({CODIGO:icode}).count()!=0
-	console.log(flagangioins)
 	var flagheartins=icode== "0214401"
 	var flagdonation=false
 	if ((flagangios && flagangioins ) || (flaghearts && flagheartins)){
 		flagdonation=true
 	}
-	console.log(flagdonation)
 	
 	
 	var currentOrderAcc = Session.get('selectedOrderAcc')

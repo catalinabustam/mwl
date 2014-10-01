@@ -1,4 +1,4 @@
-Contrasts = new Meteor.Collection('contrasts');
+ Contrasts = new Meteor.Collection('contrasts');
 
 Contrasts.allow({
     update: ownsDocument,
@@ -32,6 +32,14 @@ Meteor.methods({
 		  var update={}
 		  update[countn]=1
 		  
+		  if (contrast.tipoampolla=='nueva'){
+		 invname=contrast.sede+ "_" +contrast.nombre
+		 inventario_his=Inventarios.findOne({type:'historial'})
+		 console.log(inventario_his)
+		 updcont={}
+		 updcont[invname]=-1
+		 Inventarios.update(inventario_his._id, {$inc: updcont})
+		}
 		
 		//Counters.update(contrast.counterId, {$inc: update});
 	    //conter=Counters.findOne(contrast.counterId)

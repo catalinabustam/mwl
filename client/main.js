@@ -4,3 +4,4 @@ Meteor.subscribe('counters');
 Meteor.subscribe('donationhearts');
 Meteor.subscribe('donationangios');
 Meteor.subscribe('institutions');
+Meteor.subscribe('inventarios')
