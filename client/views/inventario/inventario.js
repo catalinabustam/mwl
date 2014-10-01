@@ -10,9 +10,6 @@ Template.inventario.events({
 	'click #submit': function(event,template) {
     event.preventDefault();
 
-
-     
-
     var nombre = $('#nombre').val();
     var sede = $('#sede').val();
 

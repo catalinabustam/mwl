@@ -8,22 +8,30 @@
 	  var now = new Date().getTime();
 	  
   Counters.insert({
-      GADOVIST_CDR:0,
-	  PRIMOVIST_CDR:0,
-	  DOTAREM_CDR:0,
+     CDR_GADOVIST:0,
+	 CDR_PRIMOVIST:0,
+	 CDR_DOTAREM:0,
+	 CDR_MAGNEVIST:0,
+	 CDR_XENETIX_300:0,
+	 CDR_HEXABRIX_320:0,
 
-      GADOVIST_POBLADO:0,
-	  PRIMOVIST_POBLADO:0,
-	  DOTAREM_POBLADO:0,
-      GADOVIST_La80:0,
-	  PRIMOVIST_La80:0,
-	  DOTAREM_La80:0,
-      GADOVIST_CENTRO:0,
-	  PRIMOVIST_CENTRO:0,
-	  DOTAREM_CENTRO:0,
-      submitted: now - 5 * 3600 * 1000,
-      month:currentMonth,
-	  year:currentYear
+     POBLADO_GADOVIST:0,
+	 POBLADO_PRIMOVIST:0,
+	 POBLADO_DOTAREM:0,
+	 POBLADO_MAGNEVIST:0,
+
+     La80_GADOVIST:0,
+	 La80_PRIMOVIST:0,
+	 La80_DOTAREM:0,
+	 La80_MAGNEVIST:0,
+
+     CENTRO_GADOVIST:0,
+	 CENTRO_PRIMOVIST:0,
+	 CENTRO_DOTAREM:0,
+	 CENTRO_MAGNEVIST:0,
+     submitted: now - 5 * 3600 * 1000,
+     month:currentMonth,
+	 year:currentYear
     });	
 }
 

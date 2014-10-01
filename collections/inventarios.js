@@ -37,11 +37,14 @@ Meteor.methods({
 //Se actualiza el record en inventario para la sede
 		  Inventarios.update(inventario.historyid, {$inc: insertc});
 // Se registra la descarga desde el almacén
+			
+
+			if ((inventario.sede) != "TODO"){
 
 		  Inventarios.update(inventario.historyid, {$inc: updatec});
 
 		  
-
+			}
 		 
 
 		  

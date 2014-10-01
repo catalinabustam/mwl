@@ -34,14 +34,20 @@ Template.contrast.events({
 	var currentOrderAcc = Session.get('selectedOrderAcc')
     var currentMonth= new Date().getMonth()+1;
     var currentYear=new Date().getFullYear();
+
+  
+
 	var countern =Counters.findOne({month:currentMonth,year:currentYear});
-    
+ 
 	
 	var nombre=$('#nombre').val()
-	if ($('#donacion').prop('checked')==true){
+
+	if ($('#donacionn').prop('checked')==true){
 		var donacioni="si"}
 	else{
 		var donacioni="no"}
+
+	console.log(donacioni)	
 		
 	if (((nombre=="GADOVIST")||(nombre=="DOTAREM"))&&(flagdonation)){
 		var donacionentidad=true
@@ -64,7 +70,7 @@ Template.contrast.events({
 	if( currentOrderAcc.indexOf("04") === 0){
 			 		 	 var sede="La80"
 			 		 }
-	var countName=nombre+"_"+sede
+	var countName=sede+"_"+nombre
 	
 
 	var tipoampolla=template.find('input:radio[name=tipoampolla]:checked');
@@ -77,7 +83,7 @@ Template.contrast.events({
       dosis: $('#dosis').val(),
 	  donacion: donacion,
 	  orderAcc: currentOrderAcc,
-	  //counterId: countern._id,
+	  counterId: countern._id,
 	  countName:countName,
 	  donacionentidad:donacionentidad,
 	  sede:sede,
@@ -100,7 +106,7 @@ Template.contrast.events({
 		   
      console.log(count)
             $('#myModal').modal('hide')
-			 //alert("Número secuencial asignado: " + count);
+			 alert("Número secuencial asignado: " + count);
 	
          
       }
