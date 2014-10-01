@@ -22,15 +22,16 @@ Meteor.methods({
 		if (!contrastAttributes.orderAcc)
 		throw new Meteor.Error(422, 'Debe ingresar el contraste a una orden');
 
-		var contrast = _.extend(_.pick(contrastAttributes, 'orderAcc', 'nombre','tipoampolla','dosis','donacion','donacionentidad','sede','modalidad'), {   
+		var contrast = _.extend(_.pick(contrastAttributes, 'orderAcc', 'nombre','tipoampolla','dosis','donacion','donacionentidad','sede','modalidad','counterId','countName'), {   
 			  userId: user._id,
 		      author: user.username,
 		      submitted: new Date()
 		  });
-		  
+		  console.log(contrast._id)
 		  var countn=contrast.countName
 		  var update={}
 		  update[countn]=1
+
 		  
 		  if (contrast.tipoampolla=='nueva'){
 		 invname=contrast.sede+ "_" +contrast.nombre
@@ -40,16 +41,18 @@ Meteor.methods({
 		 updcont[invname]=-1
 		 Inventarios.update(inventario_his._id, {$inc: updcont})
 		}
-		
-		//Counters.update(contrast.counterId, {$inc: update});
-	    //conter=Counters.findOne(contrast.counterId)
-	    //countv=conter[countn]
+
+
+		Counters.update(contrast.counterId, {$inc: update});
+	    conter=Counters.findOne(contrast.counterId)
+	    countv=conter[countn]
 			// create the contrast, save the id
-		//contrast.counterNumber=countv
+		contrast.counterNumber=countv
 		contrast._id = Contrasts.insert(contrast);
-			
+		
+
 	
-		  // return countv
+		   return countv
 	   }
    });
 	   

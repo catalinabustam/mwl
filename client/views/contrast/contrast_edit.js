@@ -65,7 +65,7 @@ Template.contrastEdit.events({
 			var donacionin="si"}
 		else{
 			var donacionin="no"}
-		
+		// cheque si las nuevas condiciones aplican para donación
 		if ((nombren=="GADOVIST")&&(flagdonation)){
 			var donacionentidadn=true
 			var donacionn="si"}
@@ -73,23 +73,108 @@ Template.contrastEdit.events({
 				var donacionn=donacionin
 				var donacionentidadn=false
 			}
-			
-			console.log(nombren)
-			console.log(donacionn)
-			console.log(donacionentidadn)
+		// Chequea el tipo de ampolla	
+		var tipoampolla=$("input[name=tipoampolla]:checked").val()
+		
 
+		tipoampollaold=Contrasts.findOne(Session.get('currentContrastId')).tipoampolla
+
+		//Define si debe modificar el inventario con las nuevas condiciones
+
+		var sede= Contrasts.findOne(Session.get('currentContrastId')).sede
+		var contrast_name= Contrasts.findOne(Session.get('currentContrastId')).nombre
+		var allnameold=sede+ "_" + contrast_name
+		var allnamenew=sede+ "_" +nombren
+		var counterId=Contrasts.findOne(Session.get('currentContrastId')).counterId
+
+		if (contrast_name == nombren){
+			var upnew=0
+			var contn=0
+			var contv=0
+
+			if ((tipoampollaold=='abierta')&&(tipoampolla=='nueva')){
+				var upold=-1
+			}
+
+			else if ((tipoampollaold=='nueva')&&(tipoampolla=='abierta')){
+				var upold=1
+
+			}
+			else{
+				var upold=0
+			}
+
+		}
+		else{
+
+			var contn=1
+			var contv=-1
+
+			if (tipoampollaold=='nueva'){
+				var upold=1
+				if (tipoampolla=='nueva'){
+					var upnew=-1
+				}
+				else{
+					var upnew=0
+				}
+			}
+			else{
+				var upold=0
+
+				if (tipoampolla=='nueva'){
+					var upnew=-1
+				}
+				else{
+					var upnew=0
+				}
+			}
+		}
+
+		var  inventario_his=Inventarios.findOne({type:'historial'})
+
+		var updateold={}
+		updateold[allnameold]=upold
+		console.log(updateold)
+		Inventarios.update(inventario_his._id, {$inc: updateold})
+
+		var updatenew={}
+		updatenew[allnamenew]=upnew
+		Inventarios.update(inventario_his._id, {$inc: updatenew})
+
+
+		var upcountold={}
+		upcountold[allnameold]=contv
+
+		console.log(upcountold)
+		Counters.update(counterId,{$inc: upcountold})
+
+		var upcountnew={}
+		upcountnew[allnamenew]=contn
+		console.log(upcountnew)
+		Counters.update(counterId,{$inc: upcountnew})
+		console.log(counterId)
+		var countva=Counters.findOne(counterId)[allnamenew]
+		
+	    
+
+
+	
+		//define las variables a ingresar
 
 	    var contrastsProperties = {
 		  nombre: nombren,
-	      ampolla: $('#ampollan').val(),
+	      //ampolla: $('#ampollan').val(),
+	      tipoampolla: tipoampolla,
 		  dosis: $('#dosisn').val(),
 		  donacion:donacionn,
-		  donacionentidad:donacionentidadn
+		  donacionentidad:donacionentidadn,
+		  counterNumber: countva
 	    }
 		
-		console.log(currentContrastId)
 
-	  Contrasts.update(currentContrastId, {$set: contrastsProperties}, function(error) {
+	     Contrasts.update(currentContrastId, {$set: contrastsProperties}, function(error) {
+	     alert("Nuevo número secuencial asignado: " + countva);
 	      if (error) {
 			  
 	        // display the error to the user
