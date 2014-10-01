@@ -2,7 +2,7 @@
 
 	<div class=well>
 		
-		Ingresar unidades de inventarioe
+		Ingresar unidades de inventario {{inventariohistory}}
   	  <div class="form-group">
 		  <label for="nombre">Nombre</label>
 		  	<div class="row">
@@ -13,9 +13,9 @@
  					  <option>GADOVIST</option>
 					  <option>PRIMOVIST</option>
  					  <option>MAGNEVIST</option>
-					  <option>XENETIX  300</option>
+					  <option>XENETIX_300</option>
 	 				 <option>GASTROVIEW</option>
-	 				<option>HEXABRIX 320</option>
+	 				<option>HEXABRIX_320</option>
  				 
 			     </select>
 			 </div>
@@ -29,23 +29,24 @@
 					  <option>CENTRO</option>
  					  <option>POBLADO</option>
 					  <option>CDR</option>
- 					  <option>LA 80</option>
+ 					  <option>La80</option>
  					  <option>FARMACIA</option>
 	 				
  				 
 			     </select>
 			 </div>
 		  </div>
-		  
+		 
 		  <label for="nombre">#</label>
 		  	<div class="row">
 	  		  <div class="col-xs-2"> 
-					 <input type="number" min="0" class="form-control" id="exampleInputPassword1" placeholder="Cantidad">
+					 <input type="number" min="0" class="form-control" id="cantidad" placeholder="Cantidad">
 			   
 			 </div>
 		  </div>
+		  
 		 
-		  		<button type="button" class="btn btn-primary">Ingresar</button>
+		  		<button id="submit" type="button" class="btn btn-primary">Ingresar</button>
 	  	      
 	  </div>
 	</div>
@@ -69,65 +70,65 @@
 						<tbody>
 							<tr>
 								<td>DOTAREM</td>
-								<td>{{inventario.CENTRO_DOTA}}</td>
-								<td>{{inventario.POBLADO_DOTA}}</td>
-								<td>{{inventario.CDR_DOTA}}</td>
-								<td>{{inventario.La80_DOTA}}</td>
-								<td>{{inventario.TODO_DOTA}}</td>
+								<td>{{inventario.CENTRO_DOTAREM}}</td>
+								<td>{{inventario.POBLADO_DOTAREM}}</td>
+								<td>{{inventario.CDR_DOTAREM}}</td>
+								<td>{{inventario.La80_DOTAREM}}</td>
+								<td>{{inventario.TODO_DOTAREM}}</td>
 							</tr>
 
 							<tr>
 								<td>GADOVIST</td>
-								<td>{{inventario.CENTRO_GADO}}</td>
-								<td>{{inventario.POBLADO_GADO}}</td>
-								<td>{{inventario.CDR_GADO_condona}}</td>
-								<td>{{inventario.La80_GADO}}</td>
-								<td>{{inventario.TODO_GADO}}</td>
+								<td>{{inventario.CENTRO_GADOVIST}}</td>
+								<td>{{inventario.POBLADO_GADOVIST}}</td>
+								<td>{{inventario.CDR_GADOVIST}}</td>
+								<td>{{inventario.La80_GADOVIST}}</td>
+								<td>{{inventario.TODO_GADOVIST}}</td>
 							</tr>
 
 							<tr>
 								<td>PRIMOVIST</td>
-								<td>{{inventario.CENTRO_PRIMO}}</td>
-								<td>{{inventario.POBLADO_PRIMO}}</td>
-								<td>{{inventario.CDR_PRIMO}}</td>
-								<td>{{inventario.La80_PRIMO}}</td>
-								<td>{{inventario.TODO_PRIMO}}</td>
+								<td>{{inventario.CENTRO_PRIMOVIST}}</td>
+								<td>{{inventario.POBLADO_PRIMOVIST}}</td>
+								<td>{{inventario.CDR_PRIMOVIST}}</td>
+								<td>{{inventario.La80_PRIMOVIST}}</td>
+								<td>{{inventario.TODO_PRIMOVIST}}</td>
 
 							</tr>
 							<tr>
 								<td>MAGNEVIST</td>
-								<td>{{inventario.CENTRO_MAGNE}}</td>
-								<td>{{inventario.POBLADO_MAGNE}}</td>
-								<td>{{inventario.CDR_MAGNE}}</td>
-								<td>{{inventario.La80_MAGNE}}</td>
-								<td>{{inventario.TODO_MAGNE}}</td>
+								<td>{{inventario.CENTRO_MAGNEVIST}}</td>
+								<td>{{inventario.POBLADO_MAGNEVIST}}</td>
+								<td>{{inventario.CDR_MAGNEVIST}}</td>
+								<td>{{inventario.La80_MAGNEVIST}}</td>
+								<td>{{inventario.TODO_MAGNEVIST}}</td>
 
 							</tr>
 
 							<tr>
 								<td>XENETIX 300</td>
-								<td>{{inventario.CENTRO_XENETIX}}</td>
-								<td>{{inventario.POBLADO_XENETIX}}</td>
-								<td>{{inventario.CDR_XENETIX}}</td>
-								<td>{{inventario.La80_XENETIX}}</td>
-								<td>{{inventario.TODO_XENETIX}}</td>
+								<td>{{inventario.CENTRO_XENETIX_300}}</td>
+								<td>{{inventario.POBLADO_XENETIX_300}}</td>
+								<td>{{inventario.CDR_XENETIX_300}}</td>
+								<td>{{inventario.La80_XENETIX_300}}</td>
+								<td>{{inventario.TODO_XENETIX_300}}</td>
 								
 							</tr>
 							<tr>
 								<td>GASTROVIEW</td>
-								<td>{{inventario.CENTRO_GASTRO}}</td>
-								<td>{{inventario.POBLADO_GASTRO}}</td>
-								<td>{{inventario.CDR_GASTRO}}</td>
-								<td>{{inventario.La80_GASTRO}}</td>
-								<td>{{inventario.TODO_GASTRO}}</td>
+								<td>{{inventario.CENTRO_GASTROVIEW}}</td>
+								<td>{{inventario.POBLADO_GASTROVIEW}}</td>
+								<td>{{inventario.CDR_GASTROVIEW}}</td>
+								<td>{{inventario.La80_GASTROVIEW}}</td>
+								<td>{{inventario.TODO_GASTROVIEW}}</td>
 							</tr>
 							<tr>
 								<td>HEXABRIX 320</td>
-								<td>{{inventario.CENTRO_HEXA}}</td>
-								<td>{{inventario.POBLADO_HEXA}}</td>
-								<td>{{inventario.CDR_HEXA}}</td>
-								<td>{{inventario.La80_HEXA}}</td>
-								<td>{{inventario.TODO_HEXA}}</td>
+								<td>{{inventario.CENTRO_HEXABRIX_320}}</td>
+								<td>{{inventario.POBLADO_HEXABRIX_320}}</td>
+								<td>{{inventario.CDR_HEXABRIX_320}}</td>
+								<td>{{inventario.La80_HEXABRIX_320}}</td>
+								<td>{{inventario.TODO_HEXABRIX_320}}</td>
 							</tr>
 						</tbody>
 					</table>
