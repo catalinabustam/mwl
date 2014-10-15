@@ -58,16 +58,16 @@ Template.contrast.events({
 	}
 	var modality=Session.get('selectedModality')
 	
-	if( currentOrderAcc.indexOf("01") === 0){
+	if( currentOrderAcc.indexOf("0001") === 0){
 		 	 var sede="CENTRO"
 		 }
-	if( currentOrderAcc.indexOf("02") === 0){
+	if( currentOrderAcc.indexOf("0002") === 0){
 	 		 	 var sede="POBLADO"
 	 		 }
-	if( currentOrderAcc.indexOf("03") === 0){
+	if( currentOrderAcc.indexOf("0003") === 0){
 		 		 	 var sede="CDR"
 		 		 }
-	if( currentOrderAcc.indexOf("04") === 0){
+	if( currentOrderAcc.indexOf("0004") === 0){
 			 		 	 var sede="La80"
 			 		 }
 	var countName=sede+"_"+nombre

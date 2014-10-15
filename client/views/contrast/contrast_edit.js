@@ -30,6 +30,7 @@ Template.contrastEdit.helpers({
 		  var donacionc=''
 	  }
 	  return donacionc
+
   },
   
    modality:function(){
@@ -73,6 +74,7 @@ Template.contrastEdit.events({
 				var donacionn=donacionin
 				var donacionentidadn=false
 			}
+		}
 		// Chequea el tipo de ampolla	
 		var tipoampolla=$("input[name=tipoampolla]:checked").val()
 		
@@ -135,7 +137,7 @@ Template.contrastEdit.events({
 
 		var updateold={}
 		updateold[allnameold]=upold
-		console.log(updateold)
+		
 		Inventarios.update(inventario_his._id, {$inc: updateold})
 
 		var updatenew={}
@@ -146,14 +148,14 @@ Template.contrastEdit.events({
 		var upcountold={}
 		upcountold[allnameold]=contv
 
-		console.log(upcountold)
+		
 		Counters.update(counterId,{$inc: upcountold})
 
 		var upcountnew={}
 		upcountnew[allnamenew]=contn
-		console.log(upcountnew)
+		
 		Counters.update(counterId,{$inc: upcountnew})
-		console.log(counterId)
+		
 		var countva=Counters.findOne(counterId)[allnamenew]
 		
 	    
