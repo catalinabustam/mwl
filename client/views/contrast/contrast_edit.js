@@ -74,7 +74,7 @@ Template.contrastEdit.events({
 				var donacionn=donacionin
 				var donacionentidadn=false
 			}
-		}
+		
 		// Chequea el tipo de ampolla	
 		var tipoampolla=$("input[name=tipoampolla]:checked").val()
 		
