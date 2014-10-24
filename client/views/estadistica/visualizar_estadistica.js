@@ -169,6 +169,7 @@ Template.visualizarestadistica.rendered = function() {
 
 }
 	Session.set('report', report)
+
 }
 reportdate.onchange = contrast;  
 reportdate.onblur = contrast;
