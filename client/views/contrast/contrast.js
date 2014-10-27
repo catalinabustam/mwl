@@ -10,6 +10,7 @@ Template.contrast.helpers({
 	modality:function(){
 		var modality=Session.get('selectedModality')
 		return modality==="RM"
+
 	},
 	donacion:function(){
 		return flagdonation
@@ -34,6 +35,9 @@ Template.contrast.events({
 	var currentOrderAcc = Session.get('selectedOrderAcc')
     var currentMonth= new Date().getMonth()+1;
     var currentYear=new Date().getFullYear();
+    var currentModalityName= Session.get('selectedModalityName')
+    var currentModality= Session.get('selectedModality')
+    console.log(currentModalityName)
 
   
 
@@ -61,13 +65,17 @@ Template.contrast.events({
 	if( currentOrderAcc.indexOf("0001") === 0){
 		 	 var sede="CENTRO"
 		 }
-	if( currentOrderAcc.indexOf("0002") === 0){
+	if( currentModalityName === "RESONADOR 03"){
 	 		 	 var sede="POBLADO"
-	 		 }
-	if( currentOrderAcc.indexOf("0003") === 0){
+
+	}
+	if( currentModalityName === "RESONADOR 04"){
 		 		 	 var sede="CDR"
 		 		 }
-	if( currentOrderAcc.indexOf("0004") === 0){
+	if( currentModalityName === "TOMOGRAFO 01"){
+	 		 	 var sede="CDR"
+	 		 }
+	if( currentModalityName === "RESONADOR 05"){
 			 		 	 var sede="La80"
 			 		 }
 	var countName=sede+"_"+nombre
