@@ -59,7 +59,7 @@ Template.visualizarestadistica.rendered = function() {
 		  CDR_DOTA_condona_tot:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"si"}).count(),
 		  CDR_DOTA_condona_enf:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"si",donacionentidad:false}).count(),
 		  CDR_DOTA_condona_ent:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"si",donacionentidad:true}).count(),
-		  CDR_DOTA_aprove:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"no",tipoampolla:"abierta"}).count(),
+		  CDR_DOTA_aprove:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"no",tipoampolla:"abierta"}).count()- Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"si",tipoampolla:"nueva"}).count(),
 		  CDR_PRIMO:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"PRIMOVIST"}).count(),
 	      CDR_PRIMO_sindona:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"PRIMOVIST",donacion:"no"}).count(),
 		  CDR_PRIMO_condona_tot:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"PRIMOVIST",donacion:"si"}).count(),

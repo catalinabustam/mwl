@@ -119,6 +119,15 @@ Template.contrast.events({
          
       }
     });
+ 	
+ 	HTTP.post("http://localhost:3001/contrast_records?user_token=Ky8g4hr15w_eC-PcS5vw",
+    {data: {"contrast_record" : { "name" : contrast.nombre, "vial" : contrast.tipoampolla, "dose" : contrast.dosis, "ent_donation" : contrast.donacionentidad, "nursing_donation": contrast.donacion, "work_order_attributes" : { "accession" : contrast.orderAcc}}}},
+          function (error, result) {
+            if (!error) {
+              Session.set("twizzled", true);
+            }
+          }); 
+ 
   }
 });
 
