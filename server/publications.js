@@ -1,11 +1,14 @@
 Meteor.publish('orders', function(options) {
-  return Orders.find({},{sort: {datetime: -1}, limit:100});
+  return Orders.find({},{sort: {datetime: -1}, limit:50});
 });
 
 Meteor.publish('counters', function() {
   return Counters.find();
 });
 
+Meteor.publish('inventarios', function() {
+  return Inventarios.find();
+});
 
 Meteor.publish('singleOrder', function(accession) {
   return accession && Orders.find({accession:accession});
@@ -30,6 +33,5 @@ Meteor.publish('donationhearts', function() {
 Meteor.publish('institutions', function() {
   return Institutions.find();
 });
-Meteor.publish('inventario', function() {
-  return Inventario.find();
-});
+
+

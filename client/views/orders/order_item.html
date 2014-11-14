@@ -1,5 +1,5 @@
 <template name="orderItem">
-  <div class="order" data-id="{{accession}}" patient-name="{{patient.firstname}} {{patient.lastname}}" modality="{{modality.type}}" procedure-code="{{procedure_code}}" institution-code="{{referring.institution.code}}">
+  <div class="order" data-id="{{accession}}" patient-name="{{patient.firstname}} {{patient.lastname}}" modality="{{modality.type}}" modality-name="{{modality.name}}" procedure-code="{{procedure_code}}" institution-code="{{referring.institution.code}}">
     <div class="order-content">
 	
       <h3><a href="{{pathFor 'orderPage'}}">{{patient.firstname}} {{patient.lastname}}</a><col-md->{{procedure_desc}}  ({{accession}})</col-md-></h3>
