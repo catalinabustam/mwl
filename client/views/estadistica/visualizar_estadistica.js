@@ -80,7 +80,7 @@ Template.visualizarestadistica.rendered = function() {
 		  CDR_DOTA_condona_ent:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"si",donacionentidad:true}).count(),
 		  CDR_DOTA_aprove:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"no",tipoampolla:"abierta"}).count() - Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",donacion:"si",tipoampolla:"nueva"}).count(),
 		  CDR_DOTA_consumo:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM",tipoampolla:"nueva"}).count(),
-		  CDR_DOTA_inventario:Contrasts.findOne({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM"},  {sort: {submitted: -1}}),
+		  //CDR_DOTA_inventario:Contrasts.findOne({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"DOTAREM"},  {sort: {submitted: -1}}),
 
 		  CDR_PRIMO:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"PRIMOVIST"}).count(),
 	      CDR_PRIMO_sindona:Contrasts.find({submitted: {$gte: startdate, $lt: enddate},sede:"CDR",nombre:"PRIMOVIST",donacion:"no"}).count(),

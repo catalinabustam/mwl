@@ -1,5 +1,5 @@
 Meteor.publish('orders', function(options) {
-  return Orders.find({},{sort: {datetime: -1}, limit:100});
+  return Orders.find({},{sort: {datetime: -1}, limit:50});
 });
 
 Meteor.publish('counters', function() {
