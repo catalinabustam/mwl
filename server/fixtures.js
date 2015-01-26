@@ -4,7 +4,7 @@
   
   var currentYear=new Date().getFullYear();
 
-  if ((currentDay=="01")&&(Counters.find({month:currentMonth, year:currentYear}).count()==0)){
+  if ((currentDay=="1")&&(Counters.find({month:currentMonth, year:currentYear}).count()==0)){
 	  var now = new Date().getTime();
 	  
   Counters.insert({

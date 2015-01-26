@@ -22,12 +22,15 @@ Template.contrast.events({
     event.preventDefault();
 	var pcode=Session.get('selectedProcedureCode')	
 	var icode=Session.get('selectedInstitutionCode')
+	var remarks=Session.get('selectedRemarks')
 	var flagangios=Donationangios.find({CODIGO:pcode}).count()!=0
 	var flaghearts=Donationhearts.find({CODIGO:pcode}).count()!=0
 	var flagangioins=Institutions.find({CODIGO:icode}).count()!=0
 	var flagheartins=icode== "0214401"
+	var flaghusvp=icode== "0217501" // husvp 
+	var tar4= remarks.indexOf("TARIFA 4")!=-1  // tarifa 4
 	var flagdonation=false
-	if ((flagangios && flagangioins ) || (flaghearts && flagheartins)){
+	if ((flagangios && flagangioins ) || (flaghearts && flagheartins) || (flaghusvp && tar4)){
 		flagdonation=true
 	}
 	
@@ -53,7 +56,7 @@ Template.contrast.events({
 
 	console.log(donacioni)	
 		
-	if (((nombre=="GADOVIST")||(nombre=="DOTAREM"))&&(flagdonation)){
+	if (((nombre=="GADOVIST")||(nombre=="DOTAREM")||(nombre=="MAGNEVIST"))&&(flagdonation)){
 		var donacionentidad=true
 		var donacion="si"}
 		else{

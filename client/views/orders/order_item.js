@@ -60,7 +60,8 @@ Template.orderItem.events({
 	  patientName,
 	  modality,
 	  procedurecode,
-	  institutionCode
+	  institutionCode,
+	  remarks
 
 	  evt.preventDefault()
 
@@ -72,12 +73,14 @@ Template.orderItem.events({
 	  modalityName=$order.attr('modality-name')
 	  procedureCode=$order.attr('procedure-code')
 	  institutionCode=$order.attr('institution-code')
+	  remarks=$order.attr('remarks')
 	  Session.set('selectedOrderAcc', orderAcc)
 	  Session.set('selectedPatientName', patientName)
 	  Session.set('selectedModality',modality)
 	  Session.set('selectedProcedureCode',procedureCode)
 	  Session.set('selectedInstitutionCode',institutionCode)
 	  Session.set('selectedModalityName',modalityName)
+	  Session.set('selectedRemarks',remarks)
 	   
   }
 	 

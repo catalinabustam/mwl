@@ -1,5 +1,5 @@
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
-     return timestamp.format('{yyyy}/{MM}/{dd} - {12hr}:{mm} {tt}');
+     return timestamp
 });
 
 Handlebars.registerHelper('pluralize', function(n, thing) {
