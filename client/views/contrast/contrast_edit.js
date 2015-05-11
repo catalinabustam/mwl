@@ -51,18 +51,21 @@ Template.contrastEdit.events({
 		var currentContrastId=Session.get('currentContrastId')
 		var currentOrderAcc=Contrasts.findOne(Session.get('currentContrastId')).orderAcc;
 		var pcode=Orders.findOne({accession:currentOrderAcc}).procedure_code;
-		var icode=Orders.findOne({accession:currentOrderAcc}).referring.institution.code
+		var icode=Orders.findOne({accession:currentOrderAcc}).referring.institution.code;
+		var remarks=Orders.findOne({accession:currentOrderAcc}).remarks;	
 		var flagangios=Donationangios.find({CODIGO:pcode}).count()!=0
 		var flaghearts=Donationhearts.find({CODIGO:pcode}).count()!=0
 		var flagangioins=Institutions.find({CODIGO:icode}).count()!=0
 		var flagheartins=icode== "0214401"
+		var flaghusvp=icode== "0217501" // husvp 
+		var tar4= remarks.indexOf("TARIFA 4")!=-1  // tarifa 4 HUSVP
 		var flagdonation=false
-		if ((flagangios && flagangioins ) || (flaghearts && flagheartins)){
-			flagdonation=true
-		}
+		if ((flagangios && flagangioins ) || (flaghearts && flagheartins) || (flaghusvp && tar4 && flagangios)){
+		flagdonation=true
+	}
 		
 		var nombren=$('#nombren').val()
-		if ($('#donacionn').prop('checked')==true){
+		if ($('#donacione').prop('checked')==true){
 			var donacionin="si"}
 		else{
 			var donacionin="no"}

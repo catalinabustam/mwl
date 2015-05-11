@@ -45,6 +45,11 @@ Meteor.methods({
 
 
 		contrast.inventario=inventario_his[invname]
+		
+		counter_old=Counters.findOne(contrast.counterId)
+		console.log('counter_old')
+
+		console.log(counter_old)
 
 		Counters.update(contrast.counterId, {$inc: update});
 	    conter=Counters.findOne(contrast.counterId)

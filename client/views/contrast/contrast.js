@@ -30,7 +30,7 @@ Template.contrast.events({
 	var flaghusvp=icode== "0217501" // husvp 
 	var tar4= remarks.indexOf("TARIFA 4")!=-1  // tarifa 4
 	var flagdonation=false
-	if ((flagangios && flagangioins ) || (flaghearts && flagheartins) || (flaghusvp && tar4)){
+	if ((flagangios && flagangioins ) || (flaghearts && flagheartins) || (flaghusvp && tar4 && flagangios)){
 		flagdonation=true
 	}
 	
@@ -65,8 +65,8 @@ Template.contrast.events({
 	}
 	var modality=Session.get('selectedModality')
 	
-	if( currentOrderAcc.indexOf("0001") === 0){
-		 	 var sede="CENTRO"
+	if( currentOrderAcc.indexOf("0005") === 0){
+		 	 var sede="HOSPITAL"
 		 }
 	if( currentModalityName === "RESONADOR 03"){
 	 		 	 var sede="POBLADO"
@@ -78,7 +78,7 @@ Template.contrast.events({
 	if( currentModalityName === "TOMOGRAFO 01"){
 	 		 	 var sede="CDR"
 	 		 }
-	if( currentModalityName === "RESONADOR 05"){
+	if(currentOrderAcc.indexOf("0004") === 0){
 			 		 	 var sede="La80"
 			 		 }
 	var countName=sede+"_"+nombre
